@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapseCustom1">Custom Pipe reverse</a>
+                </h4>
+            </div>
+            <div id="collapseCustom1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p ngNonBindable>{{ "Subhrajit" | customPipeReversestr }}</p>
+                    <p>{{ "Subhrajit" | customPipeReversestr }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapseCustom2">Custom Pipe Beautify Name</a>
+                </h4>
+            </div>
+            <div id="collapseCustom2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p ngNonBindable>{{ "Subhrajit Banerjee" | beautifyName: 'Mr.':'(II)' }}</p>
+                    <p>{{ "Subhrajit Banerjee" | beautifyName: 'Mr.':'(II)' }}</p>
+
+                    <p ngNonBindable>{{ "Soubika Banerjee" | beautifyName: 'Mrs.':''}}</p>
+                    <p>{{ "Soubika Banerjee" | beautifyName: 'Mrs.':'' }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapseCustom3">Custom Pipe Animate Number</a>
+                </h4>
+            </div>
+            <div id="collapseCustom3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>
+                        <div *ngFor="let name of (names | filterNames)">
+                            {{name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
